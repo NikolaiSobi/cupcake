@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cupcakes</h1>
+    {% for i in cupcake %}
+        <ul>
+            <p>{{i.flavor}} cupcake</p>
+        </ul>
+    {% endfor %}
+
+    <b></b>
+    <h2>Create cupcake</h2>
+    <form id="create-cupcake" action="/api/cupcakes" method="POST">
+        <div>
+          <label for="flavor">Flavor: </label>
+          <input name="flavor" id="flavor">
+        </div>
+      
+        <div>
+          <label for="size">Size: </label>
+          <input name="size" id="size">
+        </div>
+      
+        <div>
+          <label for="rating">Rating: </label>
+          <input type="number" name="rating" id="rating">
+        </div>
+      
+        <div>
+          <label for="image">Image: </label>
+          <input name="image" id="image">
+        </div>
+      
+        <button>Add!</button>
+      </form>
+</body>
+</html>
